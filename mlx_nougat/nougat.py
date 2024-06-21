@@ -17,6 +17,14 @@ class Nougat():
             path = Path(
                 snapshot_download(
                     repo_id=path_or_hf_repo,
+                     allow_patterns=[
+                        "*.json",
+                        "*.safetensors",
+                        "*.py",
+                        "tokenizer.model",
+                        "*.tiktoken",
+                        "*.txt",
+                    ],
                 )
             )
 
