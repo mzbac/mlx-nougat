@@ -6,12 +6,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="mlx_nougat",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="anchen",
+    author_email="li.anchen.au@gmail.com",
     description="A CLI tool for OCR using the Nougat model",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/mlx_nougat",
+    url="https://github.com/mzbac/mlx_nougat",
     packages=find_packages(),
     install_requires=[
         "numpy",

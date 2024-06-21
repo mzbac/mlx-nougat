@@ -76,6 +76,10 @@ mlx_nougat --input <path_to_image_or_pdf_or_url> [--output <output_file>] [--mod
    mlx_nougat --input path/to/your/image.png --model facebook/nougat-base --output results.txt
    ```
 
+## TODOs
+
+- [ ] Support quantized model to improve the performance.
+
 ## Acknowledgements
 
 This project is built upon several open-source projects and research works:
