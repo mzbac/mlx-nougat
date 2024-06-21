@@ -4,13 +4,31 @@ MLX Nougat is a CLI tool for OCR using the Nougat model.
 
 ## Installation
 
-You can install MLX Nougat using pip:
+1. Install ImageMagick:
 
-```bash
-git clone git@github.com:mzbac/mlx-nougat.git
-cd mlx-nougat
-pip install .
-```
+   ```bash
+   brew install imagemagick
+   ```
+
+2. Configure environment variables for ImageMagick:
+
+   Add the following lines to your shell configuration file (e.g., ~/.bashrc, ~/.zshrc):
+
+   ```bash
+   export MAGICK_HOME=$(brew --prefix imagemagick)
+   export PATH=$MAGICK_HOME/bin:$PATH
+   export DYLD_LIBRARY_PATH=$MAGICK_HOME/lib:$DYLD_LIBRARY_PATH
+   ```
+
+   After adding these lines, reload your shell configuration or restart your terminal.
+
+3. Install MLX Nougat:
+
+   ```bash
+   git clone git@github.com:mzbac/mlx-nougat.git
+   cd mlx-nougat
+   pip install .
+   ```
 
 ## Usage
 
@@ -30,33 +48,33 @@ mlx_nougat --input <path_to_image_or_pdf_or_url> [--output <output_file>] [--mod
 
 1. Process a local image:
 
-```bash
-mlx_nougat --input path/to/your/image.png --output results.txt
-```
+   ```bash
+   mlx_nougat --input path/to/your/image.png --output results.txt
+   ```
 
 2. Process a local PDF:
 
-```bash
-mlx_nougat --input path/to/your/document.pdf --output results.txt
-```
+   ```bash
+   mlx_nougat --input path/to/your/document.pdf --output results.txt
+   ```
 
 3. Process a remote image:
 
-```bash
-mlx_nougat --input https://example.com/image.jpg --output results.txt
-```
+   ```bash
+   mlx_nougat --input https://example.com/image.jpg --output results.txt
+   ```
 
 4. Process a remote PDF:
 
-```bash
-mlx_nougat --input https://example.com/document.pdf --output results.txt
-```
+   ```bash
+   mlx_nougat --input https://example.com/document.pdf --output results.txt
+   ```
 
 5. Use a different model:
 
-```bash
-mlx_nougat --input path/to/your/image.png --model facebook/nougat-base --output results.txt
-```
+   ```bash
+   mlx_nougat --input path/to/your/image.png --model facebook/nougat-base --output results.txt
+   ```
 
 ## Acknowledgements
 
