@@ -1,0 +1,4 @@
+mlx
+wand
+transformers
+Pillow
