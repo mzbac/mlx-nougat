@@ -76,9 +76,15 @@ mlx_nougat --input <path_to_image_or_pdf_or_url> [--output <output_file>] [--mod
    mlx_nougat --input path/to/your/image.png --model facebook/nougat-base --output results.txt
    ```
 
+6. Use a quantized model:
+
+   ```bash
+   mlx_nougat --input path/to/your/document.pdf --model mzbac/nougat-small-8bit-mlx
+   ```
+
 ## TODOs
 
-- [ ] Support quantized model to improve the performance.
+- [x] Support quantized model to improve the performance.
 
 ## Acknowledgements
 

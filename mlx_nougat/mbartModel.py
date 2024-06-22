@@ -180,7 +180,7 @@ class MBartDecoder(nn.Module):
         ) -> mx.array:
             past_key_values_length = past_key_value[0][0].shape[2] if past_key_value is not None else 0
             inputs_embeds = self.embed_tokens(input_ids) * self.embed_scale
-            positions = self.embed_positions(past_key_values_length + 2)
+            positions = self.embed_positions(mx.array(past_key_values_length + 2))
             hidden_states = inputs_embeds + positions
             hidden_states = self.layernorm_embedding(hidden_states)
 

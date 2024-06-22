@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="mlx_nougat",
-    version="0.1.0",
+    version="0.1.1",
     author="anchen",
     author_email="li.anchen.au@gmail.com",
     description="A CLI tool for OCR using the Nougat model",

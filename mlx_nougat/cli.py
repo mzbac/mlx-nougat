@@ -69,16 +69,16 @@ def sample(logits, temperature=0.0):
     
 def generate(model, pixel_values, max_new_tokens=4096, eos_token_id=2):
     encoder_hidden_states = model.encoder(pixel_values)
-    new_token = 0
-    outputs = [0]
+    new_token = mx.array([0])
+    outputs = []
     cache = None
     temperature = 0.0
     for _ in range(max_new_tokens):
         logits, cache = model.decoder(new_token, cache, encoder_hidden_states)
-        new_token = sample(logits, temperature).item()
+        new_token = sample(logits, temperature)
         if new_token == eos_token_id:
             break
-        outputs.append(new_token)
+        outputs.append(new_token.item())
     return outputs
 
 def main():
