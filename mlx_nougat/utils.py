@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Any, Dict, Optional, Union
 import mlx.core as mx
 from huggingface_hub import snapshot_download
-from huggingface_hub.utils._errors import RepositoryNotFoundError
+from huggingface_hub.utils import RepositoryNotFoundError
 
 def custom_roll(arr, shift, axis):
     if not isinstance(axis, tuple):
